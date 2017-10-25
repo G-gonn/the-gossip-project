@@ -1,0 +1,17 @@
+<h1>Listing gossips</h1>
+ 
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Content</th>
+  </tr>
+ 
+  <% @gossips.each do |gossip| %>
+    <tr>
+      <td><%= gossip.anonymous_author %></td>
+      <td><%= gossip.content %></td>
+      <td><%= link_to 'Montrer le gossip', gossip_path(gossip) %></td>
+      <td><%= link_to 'Clique pour détruire', gossip_path(gossip), method: :delete %></td>
+    </tr>
+  <% end %>
+</table>

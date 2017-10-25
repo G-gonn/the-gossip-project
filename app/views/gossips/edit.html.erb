@@ -1,0 +1,14 @@
+<h1>Editer</h1>
+
+<%= form_tag (gossips_path) do %>
+ 
+  <%= label_tag 'email', 'Email' %>
+  <%= text_field_tag 'anonymous_author' %>
+ 
+  <%= label_tag 'mon gossip', 'Mon gossip' %>
+  <%= text_area_tag 'content' %>
+ 
+  <%= submit_tag "Editer le gossip"%>
+
+  <%= link_to 'Clique pour détruire', @gossip, method: :delete %>
+<% end %>
